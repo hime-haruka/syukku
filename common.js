@@ -1,6 +1,6 @@
 // common.js — 게이지 값 1~100, 입력값만큼 ±
 (() => {
-  const MIN = 1;
+  const MIN = 0;
   const MAX = 100;
 
   document.querySelectorAll('.row').forEach(row => {
