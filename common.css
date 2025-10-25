@@ -1,26 +1,26 @@
-@font-face{font-family:'NexonWarhaven';src:url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/WarhavenR.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face {
+    font-family: 'NexonWarhaven';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/WarhavenB.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
 
 /* ================== TOKENS ================== */
 :root {
     --stage-w: 532px;
     --stage-h: 392px;
 
-    --label-w: 96px;
-    --gauge-h: 18px;
-    --gap: 10px;
-    --radius: 999px;
+    --label-w: 70px;
+    --gauge-h: 24px;
+    --gap: 8px;
+    --radius: 5px;
 
     /* colors */
-    --txt: #e8ecff;
-    --muted: #aeb7e8;
+    --txt: #ffffff;
+    --muted: #ffffff;
     --bg-soft: rgba(12,14,32,0.08);
-    --track: linear-gradient(180deg, #141736, #0d0f28);
-    --fill:  linear-gradient(90deg, #7aa2ff, #ff83c0);
-    --fill-glow: #7aa2ff66;
-}
-
-.font {
-    font-family: 'NexonWarhaven';
+    --track: #96909e;
+    --fill:  #d2ced8;
 }
 
 html, body {
@@ -32,7 +32,6 @@ html, body {
     font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: transparent;
 }
 
 .stage {
@@ -46,16 +45,12 @@ html, body {
     display: grid;
     grid-auto-rows: 1fr;
     row-gap: var(--gap);
-
-    background-image: url(/images/score.png);
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: 100%;
 }
 
 .gaugeWrap {
-    margin-top: 60px;
-    padding: 10px;
+    margin-top: 74px;
+    padding: 30px;
+    padding-top: 0;
 }
 
 .row {
@@ -67,15 +62,17 @@ html, body {
   align-items: center;
   column-gap: var(--gap);
   min-height: 1px;
+  margin-bottom: 6px;
 }
 
 .label {
-  font-weight: 800;
-  letter-spacing: .02em;
-  color: var(--muted);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+    letter-spacing: .02em;
+    color: var(--muted);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: 'NexonWarhaven';
+    font-size: 23px;
 }
 
 .gauge {
@@ -83,9 +80,6 @@ html, body {
   height: var(--gauge-h);
   border-radius: var(--radius);
   background: var(--track);
-  box-shadow:
-    inset 0 -4px 8px rgba(0,0,0,.25),
-    inset 0 0 0 1px rgba(255,255,255,.06);
   overflow: hidden;
 }
 
@@ -94,29 +88,30 @@ html, body {
   inset: 0;
   width: 0%;
   background: var(--fill);
-  box-shadow:
-    0 0 18px var(--fill-glow),
-    inset 0 -6px 10px rgba(0,0,0,.25);
   transition: width 280ms ease;
 }
 
 .btn, .num {
-  height: 36px;
-  border: none;
-  border-radius: 10px;
-  box-sizing: border-box;
-  background: #0f1230;
-  color: var(--txt);
-  font-weight: 900;
-  letter-spacing: .02em;
-  padding: 0 12px;
-  box-shadow: inset 0 0 0 2px rgba(255,255,255,.06);
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: var(--txt);
+    font-weight: 900;
+    letter-spacing: .02em;
+    padding: 0;
+    box-shadow: inset 0 0 0 2px rgba(255,255,255,.06);
+    padding: 5px;
+}
+
+.num {
+    background: var(--fill);
 }
 
 .btn {
-  min-width: 44px;
-  cursor: pointer;
-  user-select: none;
+    background: var(--track);
+    cursor: pointer;
+    user-select: none;
 }
 
 .btn:hover {
