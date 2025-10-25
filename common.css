@@ -1,3 +1,5 @@
+@font-face{font-family:'NexonWarhaven';src:url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/WarhavenR.woff2) format("woff2");font-weight:400;font-display:swap}
+
 /* ================== TOKENS ================== */
 :root {
     --stage-w: 532px;
@@ -17,35 +19,43 @@
     --fill-glow: #7aa2ff66;
 }
 
+.font {
+    font-family: 'NexonWarhaven';
+}
+
 html, body {
     margin: 0;
     width: var(--stage-w);
     height: var(--stage-h);
-    background: transparent !important;
+    background: transparent;
     color: var(--txt);
     font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: transparent;
-    background-image: url(./images/score.png);
+}
+
+.stage {
+    width: var(--stage-w);
+    height: var(--stage-h);
+    padding: 12px;
+    box-sizing: border-box;
+    backdrop-filter: blur(2px);
+    border-radius: 16px;
+
+    display: grid;
+    grid-auto-rows: 1fr;
+    row-gap: var(--gap);
+
+    background-image: url(/images/score.png);
     background-position: top left;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
-.overlay {
-  width: var(--stage-w);
-  height: var(--stage-h);
-  padding: 12px;
-  box-sizing: border-box;
-
-  background: var(--bg-soft);
-  backdrop-filter: blur(2px);
-  border-radius: 16px;
-
-  display: grid;
-  grid-auto-rows: 1fr;
-  row-gap: var(--gap);
+.gaugeWrap {
+    margin-top: 60px;
+    padding: 10px;
 }
 
 .row {
@@ -125,12 +135,3 @@ html, body {
 
 .num::-webkit-outer-spin-button,
 .num::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
-
-.btn:focus-visible,
-.num:focus-visible {
-  outline: 2px solid #ffe07a;
-  outline-offset: 2px;
-  box-shadow:
-    0 0 0 4px rgba(255,224,122,.28),
-    inset 0 0 0 2px rgba(255,255,255,.06);
-}
