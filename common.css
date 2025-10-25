@@ -17,19 +17,20 @@
     --fill-glow: #7aa2ff66;
 }
 
-  body.chroma-green { background: #00ff00; }   /* 순녹 */
-  body.chroma-blue  { background: #0070ff; }   /* 중파랑 */
-  .gauge, .fill, .btn, .num { isolation: isolate; }
-
 html, body {
-  margin: 0;
-  height: 100%;
-  background: transparent !important;
-  color: var(--txt);
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: transparent;
+    margin: 0;
+    width: var(--stage-w);
+    height: var(--stage-h);
+    background: transparent !important;
+    color: var(--txt);
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: transparent;
+    background-image: url(./images/score.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .overlay {
