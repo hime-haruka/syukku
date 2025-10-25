@@ -26,12 +26,9 @@
       numInput.value = 0;
     };
 
-    // + 버튼 클릭
     plusBtn.addEventListener('click', handlePlus);
-    // - 버튼 클릭
     minusBtn.addEventListener('click', handleMinus);
 
-    // 입력 제약
     numInput.addEventListener('input', () => {
       let v = parseInt(numInput.value, 10);
       if (Number.isNaN(v)) v = MIN;
@@ -40,7 +37,6 @@
       numInput.value = v;
     });
 
-    // ✅ 키보드 조작
     numInput.addEventListener('keydown', e => {
       switch (e.key) {
         case 'Enter':
