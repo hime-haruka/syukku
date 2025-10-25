@@ -16,11 +16,11 @@
     --radius: 5px;
 
     /* colors */
-    --txt: #ffffff;
-    --muted: #ffffff;
+    --txt: #ffffff94;
+    --muted: #ffffff94;
     --bg-soft: rgba(12,14,32,0.08);
-    --track: #96909e;
-    --fill:  #d2ced8;
+    --track: #96909e94;
+    --fill:  #d2ced894;
 }
 
 html, body {
